@@ -127,12 +127,15 @@ public class Polybius {
     }
 
     public static void main(String[] args) {
-        String a = "ALI";
-        System.out.println(a);
-       String cipher = cipher(a);
+        Scanner sc=new Scanner(System.in);
+        System.out.println('saisir le mot: );
+        String a = sc.nextLine();
+        String cipher = cipher(a);
         System.out.println(cipher);
-        a = decipher(cipher);
-        System.out.println("1234  : "+a);
+        System.out.println('saisir le nombre : );                   
+        a = sc.nextLine();
+        a = decipher(a);
+        System.out.println(a);
     }
 
 }
