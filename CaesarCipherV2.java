@@ -93,7 +93,7 @@ public class CaesarCipherV2 {
 
                     System.out.println("nbr decalage :");
                     char c = getMaxOccuringChar(ch);
-                    int ec = ch.indexOf(c);
+                    int ec = (int)c%96;
                     System.out.println(ec);
 
                     String ch3 = encryptCaesarCipher(ch, ec);
@@ -107,7 +107,7 @@ public class CaesarCipherV2 {
                     ch = sc.nextLine();
                     System.out.println("nbr decalage :");
                     c = getMaxOccuringChar(ch);
-                    ec = ch.indexOf(c);
+                    ec =(int)c%96;
                     System.out.println(ec);
                     ch3 = encryptCaesarCipher(ch, -ec);
                     System.out.println(ch3);
