@@ -92,8 +92,9 @@ public class CaesarCipherV2 {
                             .nextLine();
 
                     System.out.println("nbr decalage :");
-                    char c = getMaxOccuringChar(ch);
-                    int ec = (int)c%96;
+                    char c = getMaxOccuringChar(ch
+                            .toLowerCase().replace(" ", ""));
+                    int ec = (int) c % 96;
                     System.out.println(ec);
 
                     String ch3 = encryptCaesarCipher(ch, ec);
@@ -106,8 +107,8 @@ public class CaesarCipherV2 {
                     System.out.println("saisir chaine :");
                     ch = sc.nextLine();
                     System.out.println("nbr decalage :");
-                    c = getMaxOccuringChar(ch);
-                    ec =(int)c%96;
+                    c = getMaxOccuringChar(ch.toLowerCase().replace(" ", ""));
+                    ec = (int) c % 96;
                     System.out.println(ec);
                     ch3 = encryptCaesarCipher(ch, -ec);
                     System.out.println(ch3);
@@ -116,7 +117,7 @@ public class CaesarCipherV2 {
                 case 3:
                     exit = true;
                     break;
-                 default:
+                default:
                     break;
             }
             if (exit) {
