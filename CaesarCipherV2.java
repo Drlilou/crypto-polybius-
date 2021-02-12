@@ -77,32 +77,38 @@ public class CaesarCipherV2 {
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
         while (true) {
             menu();
             boolean exit = false;
-            Scanner sc = new Scanner(System.in);
             int option = sc.nextInt();
+            sc.nextLine();
             switch (option) {
                 case 1:
 
                     System.out.println("saisir chaine :");
                     String ch = sc
-                            .next();
+                            .nextLine();
+
                     System.out.println("nbr decalage :");
                     char c = getMaxOccuringChar(ch);
                     int ec = ch.indexOf(c);
+                    System.out.println(ec);
+
                     String ch3 = encryptCaesarCipher(ch, ec);
                     System.out.println(ch3);
                     String ch2;
+
                     break;
 
                 case 2:
                     System.out.println("saisir chaine :");
-                    ch = sc.next();
-
+                    ch = sc.nextLine();
                     System.out.println("nbr decalage :");
                     c = getMaxOccuringChar(ch);
                     ec = ch.indexOf(c);
+                    System.out.println(ec);
                     ch3 = encryptCaesarCipher(ch, -ec);
                     System.out.println(ch3);
                     break;
@@ -114,6 +120,7 @@ public class CaesarCipherV2 {
             if (exit) {
                 break;
             }
+
         }
     }
 }
