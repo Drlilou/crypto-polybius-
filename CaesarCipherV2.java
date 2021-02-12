@@ -116,6 +116,8 @@ public class CaesarCipherV2 {
                 case 3:
                     exit = true;
                     break;
+                 default:
+                    break;
             }
             if (exit) {
                 break;
